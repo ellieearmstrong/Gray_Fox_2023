@@ -1,0 +1,17 @@
+Individual,AltID,Sex,Study,Collection_Date,Approx_collection,Species,Locality
+SCA16F,SCA16F,F,2016,1988,pre-2000,Urocyon littoralis,Santa Catalina
+SCLV4F,SCLV4F,F,2016,1988,pre-2000,Urocyon littoralis,San Clemente
+SCZ05M,SCZ05M,M,2016,1988,pre-2000,Urocyon littoralis,Santa Cruz
+SMI15F,SMI15F,F,2016,1988,pre-2000,Urocyon littoralis,San Miguel
+SNI05F,SNI05F,F,2016,1988,pre-2000,Urocyon littoralis,San Nicolas
+SNI41F,SNI41F,F,2016,1988,pre-2000,Urocyon littoralis,San Nicolas
+SRO40F,SRO40F,F,2016,1988,pre-2000,Urocyon littoralis,Santa Rosa
+GFO41F,GFO41F,F,2016,2012,,Urocyon cinereoargenteus,Santa Monica Mountains
+SRR7458271,RKW11697,M,2018,2005,,Urocyon littoralis,Santa Catalina
+SRR7458268,RKW13704,F,2018,2009,,Urocyon littoralis,San Clemente
+SRR7458269,RKW8695,F,2018,2008,,Urocyon littoralis,Santa Cruz
+SRR7458266,RKW11655,M,2018,2008,,Urocyon littoralis,San Miguel
+SRR7458267,RKW12297,M,2018,2000,,Urocyon littoralis,San Nicolas
+SRR7458265,RKW12355,F,2018,1988,pre-2000,Urocyon littoralis,Santa Rosa
+SRR7458264,RKW10660,M,2018,2008,,Urocyon littoralis,Santa Rosa
+SRR7458270,NPSGFO30,M,2018,1993,pre-2000,Urocyon cinereoargenteus,Golden Gate National Rec Area
