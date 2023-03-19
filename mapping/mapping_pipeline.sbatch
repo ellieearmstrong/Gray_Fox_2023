@@ -3,7 +3,7 @@
 ##SBATCH --time=144:00:00
 ##SBATCH --mem=240000
 ##SBATCH --partition=dpetrov
-##SBATCH -n 36
+##SBATCH -n 24
 ##SBATCH --mail-type=END,FAIL
 ##SBATCH --mail-user=ellieearmstrong@gmail.com
 
@@ -16,27 +16,30 @@ module load biology gatk/4.1.4.1
 REFERENCE=/oak/stanford/groups/dpetrov/armstrong/gray-foxes/other_canid_genomes/GCF_000002285.3_CanFam3.1_genomic.fna
 THREADS_BWA=46
 
+echo "### Prepare Genome for Mapping"
 #prepare reference for mapping
 java -jar /oak/stanford/groups/dpetrov/armstrong/applications/picard.jar CreateSequenceDictionary R=$REFERENCE
 samtools faidx $REFERENCE
 bwa index -a bwtsw $REFERENCE
 
+echo "### Create Intervals For GATK"
 ##first collect list of chromosomes in genome
 cut -f1 "$REFERENCE".fai > intervals.txt
 split --number=l/10 intervals.txt
 
 #create intervals list for GATK4
-mv xaa intervals1.txt
-mv xab intervals2.txt
-mv xac intervals3.txt
-mv xad intervals4.txt
-mv xae intervals5.txt
-mv xaf intervals6.txt
-mv xag intervals7.txt
-mv xah intervals8.txt
-mv xai intervals9.txt
-mv xaj intervals10.txt
+mv xaa intervals1.list
+mv xab intervals2.list
+mv xac intervals3.list
+mv xad intervals4.list
+mv xae intervals5.list
+mv xaf intervals6.list
+mv xag intervals7.list
+mv xah intervals8.list
+mv xai intervals9.list
+mv xaj intervals10.list
 
+echo "### Map to genome"
 ##mapping to genome
 for file in *_1.fastq.gz;do
 	bn=`basename $file _1.fastq.gz`
@@ -46,6 +49,7 @@ for file in *_1.fastq.gz;do
 	java -jar /oak/stanford/groups/dpetrov/armstrong/applications/picard.jar MarkDuplicates I=${bn}.sorted.rg.bam O=${bn}.sorted.rg.md.bam M=${bn}.metrics.md.txt 
 	samtools index ${bn}.sorted.rg.md.bam
 done
+echo "### Mapping complete, merge manually"
 
 #merge samples-this step is manual for now, then proceed
 ##merge file if sample has more than one set of reads
@@ -59,26 +63,6 @@ done
 #rm *.sorted.rg.bam.bai
 
 #generate depth and coverage stats
-#ls *.sorted.rg.md.bam | -j 10 | /oak/stanford/groups/dpetrov/armstrong/applications/mosdepth {} {.}.sorted.rg.md.bam -n 
+#ls *.sorted.rg.md.bam | parallel -j 10 | /oak/stanford/groups/dpetrov/armstrong/applications/mosdepth {} {.}.sorted.rg.md.bam -n 
 #done
 
-
-#run haplotype caller per chromosome
-#for file in *.sorted.rg.md.bam;do
-#	bn=`basename .sorted.rg.md.bam`
-#	gatk HaplotypeCaller -I ${bn}.sorted.rg.md.bam -O ${bn}.rg.md.hcint1.g.vcf -L intervals1.txt -ERC GVCF --emit-ref-confidence BP_RESOLUTION -R $REFERENCE
-#	gatk HaplotypeCaller -I ${bn}.sorted.rg.md.bam -O ${bn}.rg.md.hcint2.g.vcf -L intervals2.txt -ERC GVCF --emit-ref-confidence BP_RESOLUTION -R $REFERENCE
-#	gatk HaplotypeCaller -I ${bn}.sorted.rg.md.bam -O ${bn}.rg.md.hcint3.g.vcf -L intervals3.txt -ERC GVCF --emit-ref-confidence BP_RESOLUTION -R $REFERENCE
-#	gatk HaplotypeCaller -I ${bn}.sorted.rg.md.bam -O ${bn}.rg.md.hcint4.g.vcf -L intervals4.txt -ERC GVCF --emit-ref-confidence BP_RESOLUTION -R $REFERENCE
-#	gatk HaplotypeCaller -I ${bn}.sorted.rg.md.bam -O ${bn}.rg.md.hcint5.g.vcf -L intervals5.txt -ERC GVCF --emit-ref-confidence BP_RESOLUTION -R $REFERENCE
-#	gatk HaplotypeCaller -I ${bn}.sorted.rg.md.bam -O ${bn}.rg.md.hcint6.g.vcf -L intervals6.txt -ERC GVCF --emit-ref-confidence BP_RESOLUTION -R $REFERENCE
-#	gatk HaplotypeCaller -I ${bn}.sorted.rg.md.bam -O ${bn}.rg.md.hcint7.g.vcf -L intervals7.txt -ERC GVCF --emit-ref-confidence BP_RESOLUTION -R $REFERENCE
-#	gatk HaplotypeCaller -I ${bn}.sorted.rg.md.bam -O ${bn}.rg.md.hcint8.g.vcf -L intervals8.txt -ERC GVCF --emit-ref-confidence BP_RESOLUTION -R $REFERENCE
-#	gatk HaplotypeCaller -I ${bn}.sorted.rg.md.bam -O ${bn}.rg.md.hcint9.g.vcf -L intervals9.txt -ERC GVCF --emit-ref-confidence BP_RESOLUTION -R $REFERENCE
-#	gatk HaplotypeCaller -I ${bn}.sorted.rg.md.bam -O ${bn}.rg.md.hcint10.g.vcf -L intervals10.txt -ERC GVCF --emit-ref-confidence BP_RESOLUTION -R $REFERENCE
-#done
-#
-
-#note-this is only if you need an all sites file, otherwise switch to genomicsDBimport
-#for file in *.rg.md.hcint.g.vcf;do
-#
