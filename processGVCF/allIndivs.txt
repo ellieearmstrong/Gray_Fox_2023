@@ -1,0 +1,16 @@
+GFO41F.rg.md.haplotypecaller.all.g
+SCA16F.rg.md.haplotypecaller.all.g
+SCLV4F.rg.md.haplotypecaller.all.g
+SCZ05M.rg.md.haplotypecaller.all.g
+SMI15F.rg.md.haplotypecaller.all.g
+SNI05F.rg.md.haplotypecaller.all.g
+SNI41F.rg.md.haplotypecaller.all.g
+SRO40F.rg.md.haplotypecaller.all.g
+SRR7458264.rg.md.haplotypecaller.all.g
+SRR7458265.rg.md.haplotypecaller.all.g
+SRR7458266.rg.md.haplotypecaller.all.g
+SRR7458267.rg.md.haplotypecaller.all.g
+SRR7458268.rg.md.haplotypecaller.all.g
+SRR7458269.rg.md.haplotypecaller.all.g
+SRR7458270.rg.md.haplotypecaller.all.g
+SRR7458271.rg.md.haplotypecaller.all.g
