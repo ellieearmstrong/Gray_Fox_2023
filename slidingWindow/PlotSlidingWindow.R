@@ -60,15 +60,15 @@ plotFunction = function(dataFrame, indiv, color1, color2) {
   #Now plot with the axis
   indivHet = ggplot() + 
     geom_bar(data = dataFrame, 
-             aes(x=newWinStart, y=indiv/sites_total, 
+             aes(x=newWinStart, y=(indiv/sites_total)*1000, 
                  color=as.factor(chromo)),
              stat = "identity", 
              lwd=0.5) +
-    scale_color_manual(values = rep(c(color1, color2), 38 )) +
+    scale_color_manual(values = rep(c(color1, color2), 32)) +
     #custom X axis:
     scale_x_continuous(label = axisdf$chromo, breaks= axisdf$center ) +
     scale_y_continuous(expand = c(0, 0)) + # remove space between plot area and x axis
-    labs(x = "Chromosome", y = "Heterozygosity(per bp)") +
+    labs(x = "Chromosome", y = "Heterozygosity (per kb)") +
     theme_bw() +
     theme(axis.text.x = element_text(size = 30),
           axis.text.y = element_text(size = 30),
@@ -80,40 +80,23 @@ plotFunction = function(dataFrame, indiv, color1, color2) {
 }
 
 #Plot Ethiopian Wolves
+hets_SRR7458270 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458270, "#D55E00", "bisque")
+hets_GFO41F = plotFunction(fox_Annotated, fox_Annotated$hets_GFO41F, "#D55E00", "bisque")
+hets_SRR7458271 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458271, "#D55E00", "bisque")
+hets_SCA16F = plotFunction(fox_Annotated, fox_Annotated$hets_SCA16F, "#D55E00", "bisque")
+hets_SCZ05M = plotFunction(fox_Annotated, fox_Annotated$hets_SCZ05M, "#D55E00", "bisque")
+hets_SRR7458269 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458269, "#D55E00", "bisque")
+hets_SCLV4F = plotFunction(fox_Annotated, fox_Annotated$hets_SCLV4F, "#D55E00", "bisque")
+hets_SRR7458268 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458268, "#D55E00", "bisque")
+hets_SNI05F = plotFunction(fox_Annotated, fox_Annotated$hets_SNI05F, "#D55E00", "bisque")
+hets_SNI41F = plotFunction(fox_Annotated, fox_Annotated$hets_SNI41F, "#D55E00", "bisque")
+hets_SRR7458267 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458267, "#D55E00", "bisque")
+hets_SRO40F = plotFunction(fox_Annotated, fox_Annotated$hets_SRO40F, "#D55E00", "bisque")
+hets_SRR7458265 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458265, "#D55E00", "bisque")
+hets_SRR7458264 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458264, "#D55E00", "bisque")
+hets_SMI15F = plotFunction(fox_Annotated, fox_Annotated$hets_SMI15F, "#D55E00", "bisque")
+hets_SRR7458266 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458266, "#D55E00", "bisque")
 
-#hets_EW1 = plotFunction(EW_Annotated, EW_Annotated$hets_EW1, "#D55E00", "bisque")
-#hets_EW2 = plotFunction(EW_Annotated, EW_Annotated$hets_EW2, "#D55E00", "bisque")
-hets_EW3 = plotFunction(EW_Annotated, EW_Annotated$hets_EW3, "#D55E00", "bisque")
-#hets_EW4 = plotFunction(EW_Annotated, EW_Annotated$hets_EW4, "#D55E00", "bisque")
-#hets_EW5 = plotFunction(EW_Annotated, EW_Annotated$hets_EW5, "#D55E00", "bisque")
-#hets_EW6 = plotFunction(EW_Annotated, EW_Annotated$hets_EW6, "#D55E00", "bisque")
-#hets_EW7 = plotFunction(EW_Annotated, EW_Annotated$hets_EW7, "#D55E00", "bisque")
-#hets_EW8 = plotFunction(EW_Annotated, EW_Annotated$hets_EW8, "#D55E00", "bisque")
-#hets_EW9 = plotFunction(EW_Annotated, EW_Annotated$hets_EW9, "#D55E00", "bisque")
-#hets_EW10 = plotFunction(EW_Annotated, EW_Annotated$hets_EW10, "#D55E00", "bisque")
-
-#ggarrange(hets_EW1,hets_EW2,hets_EW3,hets_EW4,hets_EW5,hets_EW5,hets_EW6,hets_EW8,hets_EW9,hets_EW10, nrow = 5, ncol = 2, align='hv')
 
 
-#Plot IR 
-#IR relatedness (1,6,9,4 are unknown anestry; 10 & 2 parent-offspring; 7 & 8 parent-offspring; 5 & 3 are inbred af )
-
-#hets_IR1 = plotFunction(IR_Annotated, IR_Annotated$hets_IR1,"#FF9326", "steelblue")
-#hets_IR2 = plotFunction(IR_Annotated, IR_Annotated$hets_IR2,"#FF9326", "steelblue")
-hets_IR3 = plotFunction(IR_Annotated, IR_Annotated$hets_IR3,"#FF9326", "steelblue")
-#hets_IR4 = plotFunction(IR_Annotated, IR_Annotated$hets_IR4,"#FF9326", "steelblue")
-#hets_IR5 = plotFunction(IR_Annotated, IR_Annotated$hets_IR5,"#FF9326", "steelblue")
-#hets_IR6 = plotFunction(IR_Annotated, IR_Annotated$hets_IR6,"#FF9326", "steelblue")
-#hets_IR7 = plotFunction(IR_Annotated, IR_Annotated$hets_IR7,"#FF9326", "steelblue")
-#hets_IR8 = plotFunction(IR_Annotated, IR_Annotated$hets_IR8,"#FF9326", "steelblue")
-#hets_IR9 = plotFunction(IR_Annotated, IR_Annotated$hets_IR9,"#FF9326", "steelblue")
-#hets_IR10 = plotFunction(IR_Annotated, IR_Annotated$hets_IR10,"#FF9326", "steelblue")
-
-#ggarange(hets_IR1,hets_IR6,hets_IR9,hets_IR4,hets_IR10,hets_IR7,hets_IR2,hets_IR8,hets_IR5,hets_IR3, nrow = 5, ncol = 2, align='hv')
-
-#Plot one example from the others
-hets_AW13 = plotFunction(AW_Annotated, AW_Annotated$hets_AW13,"gray25", "cyan3")
-hets_PG3 = plotFunction(PG_Annotated, PG_Annotated$hets_PG3,"mediumpurple4", "aquamarine2")
-hets_BC3 = plotFunction(BC_Annotated, BC_Annotated$hets_BC3,"#009E73", "mistyrose")
-hets_LB3 = plotFunction(LB_Annotated, LB_Annotated$hets_LB3,"gold3", "firebrick2")
-hets_TM3 = plotFunction(TM_Annotated, TM_Annotated$hets_TM3,"#CC79A7", "lightblue2")
+ggarrange(hets_SRR7458266,hets_SMI15F,hets_SRR7458264,hets_SRR7458265,hets_SRO40F,hets_SRR7458267,hets_SNI41F, hets_SNI05F, hets_SRR7458268,hets_SCLV4F,hets_SRR7458269,hets_SCZ05M, hets_SCA16F, hets_SRR7458271,hets_GFO41F, hets_SRR7458270, nrow = 4, ncol = 4, align='hv')
