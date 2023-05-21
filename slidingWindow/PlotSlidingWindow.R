@@ -79,24 +79,29 @@ plotFunction = function(dataFrame, indiv, color1, color2) {
   return(indivHet)
 }
 
-#Plot Ethiopian Wolves
-hets_SRR7458270 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458270, "#D55E00", "bisque")
-hets_GFO41F = plotFunction(fox_Annotated, fox_Annotated$hets_GFO41F, "#D55E00", "bisque")
+#Plot Santa Catalina
 hets_SRR7458271 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458271, "#D55E00", "bisque")
 hets_SCA16F = plotFunction(fox_Annotated, fox_Annotated$hets_SCA16F, "#D55E00", "bisque")
-hets_SCZ05M = plotFunction(fox_Annotated, fox_Annotated$hets_SCZ05M, "#D55E00", "bisque")
-hets_SRR7458269 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458269, "#D55E00", "bisque")
+#Plot San Clemente
 hets_SCLV4F = plotFunction(fox_Annotated, fox_Annotated$hets_SCLV4F, "#D55E00", "bisque")
 hets_SRR7458268 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458268, "#D55E00", "bisque")
-hets_SNI05F = plotFunction(fox_Annotated, fox_Annotated$hets_SNI05F, "#D55E00", "bisque")
-hets_SNI41F = plotFunction(fox_Annotated, fox_Annotated$hets_SNI41F, "#D55E00", "bisque")
-hets_SRR7458267 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458267, "#D55E00", "bisque")
+#Plot Santa Cruz
+hets_SCZ05M = plotFunction(fox_Annotated, fox_Annotated$hets_SCZ05M, "#D55E00", "bisque")
+hets_SRR7458269 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458269, "#D55E00", "bisque")
+#Plot San Miguel
+hets_SMI15F = plotFunction(fox_Annotated, fox_Annotated$hets_SMI15F, "#D55E00", "bisque")
+hets_SRR7458266 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458266, "#D55E00", "bisque")
+#Plot Santa Rosa
 hets_SRO40F = plotFunction(fox_Annotated, fox_Annotated$hets_SRO40F, "#D55E00", "bisque")
 hets_SRR7458265 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458265, "#D55E00", "bisque")
 hets_SRR7458264 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458264, "#D55E00", "bisque")
-hets_SMI15F = plotFunction(fox_Annotated, fox_Annotated$hets_SMI15F, "#D55E00", "bisque")
-hets_SRR7458266 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458266, "#D55E00", "bisque")
-
-
+#Plot Santa Monica Mnts
+hets_GFO41F = plotFunction(fox_Annotated, fox_Annotated$hets_GFO41F, "#D55E00", "bisque")
+#Plot San Nicolas
+hets_SNI05F = plotFunction(fox_Annotated, fox_Annotated$hets_SNI05F, "#D55E00", "bisque")
+hets_SNI41F = plotFunction(fox_Annotated, fox_Annotated$hets_SNI41F, "#D55E00", "bisque")
+hets_SRR7458267 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458267, "#D55E00", "bisque")
+#Plot Golden Gate
+hets_SRR7458270 = plotFunction(fox_Annotated, fox_Annotated$hets_SRR7458270, "#D55E00", "bisque")
 
 ggarrange(hets_SRR7458266,hets_SMI15F,hets_SRR7458264,hets_SRR7458265,hets_SRO40F,hets_SRR7458267,hets_SNI41F, hets_SNI05F, hets_SRR7458268,hets_SCLV4F,hets_SRR7458269,hets_SCZ05M, hets_SCA16F, hets_SRR7458271,hets_GFO41F, hets_SRR7458270, nrow = 4, ncol = 4, align='hv')
