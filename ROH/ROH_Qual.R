@@ -4,18 +4,18 @@ library(tidyverse)
 library(mgsub)
 
 #Load files
-setwd("~/Gray_Fox_2023/ROH/overlapCallable/")
-popDF = read.csv("~/Gray_Fox_2023/metadata/fox_metadata.csv")
-chroms = read.delim("~/Gray_Fox_2023/metadata/fox_chrom_withLengths.map")
+setwd("~/Documents/Gray_Fox_2023/ROH/overlapCallable/")
+popDF = read.csv("~/Documents/Gray_Fox_2023/metadata/fox_metadata.csv")
+chroms = read.delim("~/Documents/Gray_Fox_2023/metadata/fox_chrom_withLengths.map")
 
 #Load vcftools outputs
 fnames = list.files(pattern = "\\ROH.bed$")
 df = rbindlist(sapply(fnames, fread, simplify = FALSE), use.names = TRUE) #Read all the files into a data frame 
-colnames(df) = c("CHROM", "start", "end", "indiv", "numCallableSitesOverlap", "numROHBasesOverlaped", "rohLength", "propCoverage")
+colnames(df) = c("CHROM", "start", "end", "type" ,"indiv", "numCallableSitesOverlap", "numROHBasesOverlaped", "rohLength", "propCoverage")
 #Remove header lines and convert character columns to numeric
 
 filterROH = df %>%
-  select("CHROM", "start", "end", "indiv", "rohLength", "propCoverage") %>%
+  select("CHROM", "start","type" , "end", "indiv", "rohLength", "propCoverage") %>%
   filter(propCoverage >= .60 & propCoverage <= .95 & rohLength >= 10000) %>%
   mutate(Population = popDF$Locality[match(indiv, popDF$Individual)])
   
@@ -27,7 +27,7 @@ filterROH = df %>%
 #filterROH = subset(z, z$ToKeep == "TRUE")
 
 
-#write.table(filterROH, file="~/Gray_Fox_2023/ROH/FinalROHQCd_min10KbminPropCov60per_allIndivs_May2023_garlic.bed", quote = FALSE, sep = "\t", row.names = FALSE, col.names = TRUE)
+#write.table(filterROH, file="~/Documents/Gray_Fox_2023/ROH/FinalROHQCd_min10KbminPropCov60per_allIndivs_May2023_garlic.bed", quote = FALSE, sep = "\t", row.names = FALSE, col.names = TRUE)
 
 #Plot the distribution of coverage of ROHs post-filtering
 postFilter = ggplot() + 
@@ -45,7 +45,7 @@ postFilter = ggplot() +
 genomeLength = sum(chroms$length)
 
 IndividualLevel = filterROH %>%
-  filter(rohLength >= 10^6) %>%
+  filter(type == "C") %>%
   group_by(indiv) %>% 
   summarise(TotalROH = sum(rohLength)) %>%
   mutate(TotalROHMb = TotalROH/10^6, 

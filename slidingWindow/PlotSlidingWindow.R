@@ -67,8 +67,8 @@ plotFunction = function(dataFrame, indiv, color1, color2) {
     scale_color_manual(values = rep(c(color1, color2), 32)) +
     #custom X axis:
     scale_x_continuous(label = axisdf$chromo, breaks= axisdf$center ) +
-    scale_y_continuous(expand = c(0, 0)) + # remove space between plot area and x axis
-    labs(x = "Chromosome", y = "Heterozygosity (per kb)") +
+    scale_y_continuous(expand = c(0, 0), limits = c(0, 6)) + # remove space between plot area and x axis
+    labs(x = NULL, y = NULL) +
     theme_bw() +
     theme(axis.text.x = element_text(size = 30),
           axis.text.y = element_text(size = 30),
