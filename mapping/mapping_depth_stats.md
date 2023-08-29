@@ -1,4 +1,4 @@
-#Calculating Mapping and Depth Summary Statistics for Fox Files
+# Calculating Mapping and Depth Summary Statistics for Fox Files
 ```
 module load biology samtools
 for file in *.sorted.md.rg.bam;do
