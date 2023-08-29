@@ -1,8 +1,9 @@
 
 
 
-Canfam3
-To alculate average across all scaffolds
+**Canfam3**
+
+To calculate average across all scaffolds
 ```
 for file in *.mosdepth.summary.txt;do echo $file &&  awk '{ print $4} ;done
 ```
