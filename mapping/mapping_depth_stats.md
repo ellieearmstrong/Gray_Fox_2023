@@ -12,7 +12,7 @@ done
 
 To calculate average across all scaffolds
 ```
-for file in *.mosdepth.summary.txt;do echo $file &&  awk '{ print $4}' ;done
+for file in *.mosdepth.summary.txt;do echo $file && tail -n 1 $file | awk '{ print $4}' ;done
 ```
 To calculate average across only autosomes for Canfam3
 ```
