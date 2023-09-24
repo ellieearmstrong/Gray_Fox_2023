@@ -1,22 +1,61 @@
+#SBATCH --job-name=slidingwin
+#SBATCH --output=/scratch/users/elliea/jazlyn-ellie/grayfox_2023/logfiles/slidingwin.out  #you will need to modify the path
+#SBATCH --error=/scratch/users/elliea/jazlyn-ellie/grayfox_2023/logfiles/slidingwin.err  #you will need to modify the path
+#SBATCH --time=10:00:00 #run time
+#SBATCH -p normal #the main partition
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1 #one cpu per task
+#SBATCH --mem-per-cpu=4000MB #this is equivalent to 4G
+#SBATCH --mail-type=END,FAIL # notifications for job done & fail
+#SBATCH --mail-user=jazlyn.mooney@gmail.com
 
-
-##qsub -cwd -V -N slidingWindows -l highp,time=00:20:00,h_data=10G -t 1-38:1 -M eplau -m a runSlidingWindow.sh
-##CHROM=${SGE_TASK_ID}
-
-for CHROM in {1..32}; 
-do 
-
-inputDir='/scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/splitChroms/'
-master_VCF=${inputDir}/'chrom'${CHROM}'_fox_merge_variants_bisnps_autosome.GM.eh2.AN.qualdp.renamedChrom.vcf.gz'
-
-
-#load python
+#load python and pysam
 ml biology python/2.7.13
 ml biology py-pysam/0.14.1_py27
 
-#command to run script
-#python SlidingWindowHet_Unphased.jar.ab.jam.py --vcf ${master_VCF} --window_size 1000000 --step_size 1000000 --chromNum ${CHROM}
-python SlidingWindowHet_Unphased.jar.ab.jam.py --vcf ${master_VCF} --window_size 10000 --step_size 10000 --chromNum ${CHROM}
+inputDir='/scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/splitChroms'
+outputDir='/scratch/users/elliea/jazlyn-ellie/grayfox_2023/Analyses/slidingWindow/'
+
+#finish can fam genomes
+
+SECONDS=0
+
+for ref in {Canfam3.1,Canfam4}
+do
+        for CHROM in {1..38}
+        do
+	#command to run script
+	master_VCF=${inputDir}/'chr'${CHROM}'_'${ref}'_filtered.renameChroms.ACgr25_DPgr165lt500.vcf.gz'
+	python SlidingWindowHet_Unphased.jar.ab.jam.${ref}.py --vcf ${master_VCF} --window_size 100000 --step_size 10000 --chromNum chr${CHROM} --outpath ${outputDir}
+
+	done
+
+echo "done $ref"
+
 done
 
+echo $SECONDS
+
+#run for gray fox
+SECONDS=0
+for CHROM in {1..32}
+do
+	#command to run script
+        master_VCF=${inputDir}/'chr'${CHROM}'_grayfox_filtered.renameChroms.ACgr25_DPgr165lt500.vcf.gz'
+        python SlidingWindowHet_Unphased.jar.ab.jam.grayfox.py --vcf ${master_VCF} --window_size 100000 --step_size 10000 --chromNum chr${CHROM} --outpath ${outputDir}
+
+done
+echo $SECONDS
+
+
+#run for arctic fox
+SECONDS=0
+for CHROM in {1..24}
+do
+        #command to run script
+        master_VCF=${inputDir}/'chr'${CHROM}'_arcticfox_filtered.renameChroms.ACgr25_DPgr165lt500.vcf.gz'
+        python SlidingWindowHet_Unphased.jar.ab.jam.arcticfox.py --vcf ${master_VCF} --window_size 100000 --step_size 10000 --chromNum chr${CHROM} --outpath ${outputDir}
+
+done
+echo $SECONDS
 
