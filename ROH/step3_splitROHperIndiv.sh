@@ -1,4 +1,7 @@
 
+### generate the allROHFiles.txt which is just a list of the files that end with roh.bed
+ls -1 *.roh.bed > allROHFiles.txt
+
 #split files per inidividual
 while read -r p; do csplit --prefix=$p --suffix-format="%d.out" -z $p /track/ '{*}'; done < allROHFiles.txt
 
