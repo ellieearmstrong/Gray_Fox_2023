@@ -73,12 +73,12 @@ def calculate_statistics(file_path):
 #filter missing
 calculate_statistics('filtered_canFam3.1_gvcfstats.DP_NMISS.out')
 calculate_statistics('filtered_arcticfox_gvcfstats.DP_NMISS.out')
-calculate_statistics('filtered_canFam4_gvcfstats.DP_NMISS.out')
+calculate_statistics('filtered_canFam4_gvcfstats.DP_NMISS.rmfinal.out')
 calculate_statistics('filtered_grayfox_gvcfstats.DP_NMISS.out')
 
 #unfiltered
-#calculate_statistics('canFam3.1_gvcfstats.DP_NMISS.out')
-#calculate_statistics('arcticfox_gvcfstats.DP_NMISS.out')
-#calculate_statistics('canFam4_gvcfstats.DP_NMISS.out')
-#calculate_statistics('grayfox_gvcfstats.DP_NMISS.out')
+calculate_statistics('canFam3.1_gvcfstats.DP_NMISS.out')
+calculate_statistics('arcticfox_gvcfstats.DP_NMISS.out')
+calculate_statistics('canFam4_gvcfstats.DP_NMISS.rmfinal.out')
+calculate_statistics('grayfox_gvcfstats.DP_NMISS.out')
 
