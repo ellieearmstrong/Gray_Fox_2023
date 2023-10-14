@@ -1,0 +1,65 @@
+Ref,INDV,AltID,Sex,Study,Collection_Date,CollectionGeneral,Species,Type,Locality,Local_date,hetPer10Kb,F,heterozygosity
+arcticfox,GFO41F,GFO41F,F,2016,2012,2000s,Urocyon cinereoargenteus,Mainland,Santa Monica Mountains,Santa Monica Mountains 2000s,4.63257706,-1.31933,0.000463258
+Canfam3.1,GFO41F,GFO41F,F,2016,2012,2000s,Urocyon cinereoargenteus,Mainland,Santa Monica Mountains,Santa Monica Mountains 2000s,4.583664873,-1.32436,0.000458366
+Canfam4,GFO41F,GFO41F,F,2016,2012,2000s,Urocyon cinereoargenteus,Mainland,Santa Monica Mountains,Santa Monica Mountains 2000s,4.602556217,-1.32594,0.000460256
+grayfox,GFO41F,GFO41F,F,2016,2012,2000s,Urocyon cinereoargenteus,Mainland,Santa Monica Mountains,Santa Monica Mountains 2000s,5.054773284,-1.59782,0.000505477
+arcticfox,SRR7458270,NPSGFO30,M,2018,1993,1990s,Urocyon cinereoargenteus,Mainland,Golden Gate National Rec Area,Golden Gate National Rec Area 1990s,3.425789486,-0.71598,0.000342579
+Canfam3.1,SRR7458270,NPSGFO30,M,2018,1993,1990s,Urocyon cinereoargenteus,Mainland,Golden Gate National Rec Area,Golden Gate National Rec Area 1990s,3.389742719,-0.71959,0.000338974
+Canfam4,SRR7458270,NPSGFO30,M,2018,1993,1990s,Urocyon cinereoargenteus,Mainland,Golden Gate National Rec Area,Golden Gate National Rec Area 1990s,3.400292988,-0.71904,0.000340029
+grayfox,SRR7458270,NPSGFO30,M,2018,1993,1990s,Urocyon cinereoargenteus,Mainland,Golden Gate National Rec Area,Golden Gate National Rec Area 1990s,3.447709704,-0.77266,0.000344771
+arcticfox,SCA16F,SCA16F,F,2016,1988,1988,Urocyon littoralis,Island,Santa Catalina,Santa Catalina 1988,0.90038909,0.54554,9.00389E-05
+Canfam3.1,SCA16F,SCA16F,F,2016,1988,1988,Urocyon littoralis,Island,Santa Catalina,Santa Catalina 1988,0.891583034,0.54431,8.91583E-05
+Canfam4,SCA16F,SCA16F,F,2016,1988,1988,Urocyon littoralis,Island,Santa Catalina,Santa Catalina 1988,0.893313591,0.54498,8.93314E-05
+grayfox,SCA16F,SCA16F,F,2016,1988,1988,Urocyon littoralis,Island,Santa Catalina,Santa Catalina 1988,0.748695203,0.6128,7.48695E-05
+arcticfox,SCLV4F,SCLV4F,F,2016,1988,1988,Urocyon littoralis,Island,San Clemente,San Clemente 1988,0.29358855,0.85307,2.93589E-05
+Canfam3.1,SCLV4F,SCLV4F,F,2016,1988,1988,Urocyon littoralis,Island,San Clemente,San Clemente 1988,0.292794474,0.85159,2.92794E-05
+Canfam4,SCLV4F,SCLV4F,F,2016,1988,1988,Urocyon littoralis,Island,San Clemente,San Clemente 1988,0.290877638,0.85306,2.90878E-05
+grayfox,SCLV4F,SCLV4F,F,2016,1988,1988,Urocyon littoralis,Island,San Clemente,San Clemente 1988,0.241749767,0.87577,2.4175E-05
+arcticfox,SCZ05M,SCZ05M,M,2016,1988,1988,Urocyon littoralis,Island,Santa Cruz,Santa Cruz 1988,0.596090706,0.70137,5.96091E-05
+Canfam3.1,SCZ05M,SCZ05M,M,2016,1988,1988,Urocyon littoralis,Island,Santa Cruz,Santa Cruz 1988,0.58756788,0.70188,5.87568E-05
+Canfam4,SCZ05M,SCZ05M,M,2016,1988,1988,Urocyon littoralis,Island,Santa Cruz,Santa Cruz 1988,0.589648715,0.70183,5.89649E-05
+grayfox,SCZ05M,SCZ05M,M,2016,1988,1988,Urocyon littoralis,Island,Santa Cruz,Santa Cruz 1988,0.449834644,0.76871,4.49835E-05
+arcticfox,SMI15F,SMI15F,F,2016,1988,1988,Urocyon littoralis,Island,San Miguel,San Miguel 1988,0.289097983,0.85532,2.89098E-05
+Canfam3.1,SMI15F,SMI15F,F,2016,1988,1988,Urocyon littoralis,Island,San Miguel,San Miguel 1988,0.287833681,0.85412,2.87834E-05
+Canfam4,SMI15F,SMI15F,F,2016,1988,1988,Urocyon littoralis,Island,San Miguel,San Miguel 1988,0.287001696,0.85503,2.87002E-05
+grayfox,SMI15F,SMI15F,F,2016,1988,1988,Urocyon littoralis,Island,San Miguel,San Miguel 1988,0.257606129,0.86763,2.57606E-05
+arcticfox,SNI05F,SNI05F,F,2016,1988,1988,Urocyon littoralis,Island,San Nicolas,San Nicolas 1988,0.266381791,0.86525,2.66382E-05
+Canfam3.1,SNI05F,SNI05F,F,2016,1988,1988,Urocyon littoralis,Island,San Nicolas,San Nicolas 1988,0.262619122,0.8655,2.62619E-05
+Canfam4,SNI05F,SNI05F,F,2016,1988,1988,Urocyon littoralis,Island,San Nicolas,San Nicolas 1988,0.253034964,0.87084,2.53035E-05
+grayfox,SNI05F,SNI05F,F,2016,1988,1988,Urocyon littoralis,Island,San Nicolas,San Nicolas 1988,0.053226382,0.97248,5.32264E-06
+arcticfox,SNI41F,SNI41F,F,2016,1988,1988,Urocyon littoralis,Island,San Nicolas,San Nicolas 1988,0.504361589,0.74716,5.04362E-05
+Canfam3.1,SNI41F,SNI41F,F,2016,1988,1988,Urocyon littoralis,Island,San Nicolas,San Nicolas 1988,0.434671802,0.77931,4.34672E-05
+Canfam4,SNI41F,SNI41F,F,2016,1988,1988,Urocyon littoralis,Island,San Nicolas,San Nicolas 1988,0.433370741,0.78069,4.33371E-05
+grayfox,SNI41F,SNI41F,F,2016,1988,1988,Urocyon littoralis,Island,San Nicolas,San Nicolas 1988,0.086758472,0.95538,8.67585E-06
+arcticfox,SRO40F,SRO40F,F,2016,1988,1988,Urocyon littoralis,Island,Santa Rosa,Santa Rosa 1988,1.062447917,0.46575,0.000106245
+Canfam3.1,SRO40F,SRO40F,F,2016,1988,1988,Urocyon littoralis,Island,Santa Rosa,Santa Rosa 1988,1.047110957,0.46691,0.000104711
+Canfam4,SRO40F,SRO40F,F,2016,1988,1988,Urocyon littoralis,Island,Santa Rosa,Santa Rosa 1988,1.04647059,0.46889,0.000104647
+grayfox,SRO40F,SRO40F,F,2016,1988,1988,Urocyon littoralis,Island,Santa Rosa,Santa Rosa 1988,0.514103375,0.73518,5.14103E-05
+arcticfox,SRR7458264,RKW10660,M,2018,2008,2000s,Urocyon littoralis,Island,Santa Rosa,Santa Rosa 2000s,0.549807478,0.72495,5.49807E-05
+Canfam3.1,SRR7458264,RKW10660,M,2018,2008,2000s,Urocyon littoralis,Island,Santa Rosa,Santa Rosa 2000s,0.544495813,0.72412,5.44496E-05
+Canfam4,SRR7458264,RKW10660,M,2018,2008,2000s,Urocyon littoralis,Island,Santa Rosa,Santa Rosa 2000s,0.5470538,0.72377,5.47054E-05
+grayfox,SRR7458264,RKW10660,M,2018,2008,2000s,Urocyon littoralis,Island,Santa Rosa,Santa Rosa 2000s,0.470538219,0.75826,4.70538E-05
+arcticfox,SRR7458265,RKW12355,F,2018,1988,1988,Urocyon littoralis,Island,Santa Rosa,Santa Rosa 1988,0.583469849,0.70781,5.8347E-05
+Canfam3.1,SRR7458265,RKW12355,F,2018,1988,1988,Urocyon littoralis,Island,Santa Rosa,Santa Rosa 1988,0.577316472,0.7072,5.77316E-05
+Canfam4,SRR7458265,RKW12355,F,2018,1988,1988,Urocyon littoralis,Island,Santa Rosa,Santa Rosa 1988,0.577953482,0.70788,5.77953E-05
+grayfox,SRR7458265,RKW12355,F,2018,1988,1988,Urocyon littoralis,Island,Santa Rosa,Santa Rosa 1988,0.509960004,0.73791,5.0996E-05
+arcticfox,SRR7458266,RKW11655,M,2018,2008,2000s,Urocyon littoralis,Island,San Miguel,San Miguel 2000s,0.270588743,0.86462,2.70589E-05
+Canfam3.1,SRR7458266,RKW11655,M,2018,2008,2000s,Urocyon littoralis,Island,San Miguel,San Miguel 2000s,0.266906809,0.86474,2.66907E-05
+Canfam4,SRR7458266,RKW11655,M,2018,2008,2000s,Urocyon littoralis,Island,San Miguel,San Miguel 2000s,0.267830951,0.86474,2.67831E-05
+grayfox,SRR7458266,RKW11655,M,2018,2008,2000s,Urocyon littoralis,Island,San Miguel,San Miguel 2000s,0.186179458,0.90434,1.86179E-05
+arcticfox,SRR7458267,RKW12297,M,2018,2000,2000s,Urocyon littoralis,Island,San Nicolas,San Nicolas 2000s,0.165455451,0.91722,1.65455E-05
+Canfam3.1,SRR7458267,RKW12297,M,2018,2000,2000s,Urocyon littoralis,Island,San Nicolas,San Nicolas 2000s,0.161121435,0.91835,1.61121E-05
+Canfam4,SRR7458267,RKW12297,M,2018,2000,2000s,Urocyon littoralis,Island,San Nicolas,San Nicolas 2000s,0.16088866,0.91875,1.60889E-05
+grayfox,SRR7458267,RKW12297,M,2018,2000,2000s,Urocyon littoralis,Island,San Nicolas,San Nicolas 2000s,0.035464335,0.98178,3.54643E-06
+arcticfox,SRR7458268,RKW13704,F,2018,2009,2000s,Urocyon littoralis,Island,San Clemente,San Clemente 2000s,0.390969705,0.80401,3.9097E-05
+Canfam3.1,SRR7458268,RKW13704,F,2018,2009,2000s,Urocyon littoralis,Island,San Clemente,San Clemente 2000s,0.385003294,0.80452,3.85003E-05
+Canfam4,SRR7458268,RKW13704,F,2018,2009,2000s,Urocyon littoralis,Island,San Clemente,San Clemente 2000s,0.384904616,0.80523,3.84905E-05
+grayfox,SRR7458268,RKW13704,F,2018,2009,2000s,Urocyon littoralis,Island,San Clemente,San Clemente 2000s,0.241962247,0.87549,2.41962E-05
+arcticfox,SRR7458269,RKW8695,F,2018,2008,2000s,Urocyon littoralis,Island,Santa Cruz,Santa Cruz 2000s,0.576885935,0.71138,5.76886E-05
+Canfam3.1,SRR7458269,RKW8695,F,2018,2008,2000s,Urocyon littoralis,Island,Santa Cruz,Santa Cruz 2000s,0.566082329,0.71315,5.66082E-05
+Canfam4,SRR7458269,RKW8695,F,2018,2008,2000s,Urocyon littoralis,Island,Santa Cruz,Santa Cruz 2000s,0.565004466,0.71467,5.65004E-05
+grayfox,SRR7458269,RKW8695,F,2018,2008,2000s,Urocyon littoralis,Island,Santa Cruz,Santa Cruz 2000s,0.459256829,0.76404,4.59257E-05
+arcticfox,SRR7458271,RKW11697,M,2018,2005,2000s,Urocyon littoralis,Island,Santa Catalina,Santa Catalina 2000s,0.869468328,0.56502,8.69468E-05
+Canfam3.1,SRR7458271,RKW11697,M,2018,2005,2000s,Urocyon littoralis,Island,Santa Catalina,Santa Catalina 2000s,0.855995908,0.56627,8.55996E-05
+Canfam4,SRR7458271,RKW11697,M,2018,2005,2000s,Urocyon littoralis,Island,Santa Catalina,Santa Catalina 2000s,0.860877013,0.56527,8.60877E-05
+grayfox,SRR7458271,RKW11697,M,2018,2005,2000s,Urocyon littoralis,Island,Santa Catalina,Santa Catalina 2000s,0.794703886,0.59169,7.94704E-05
