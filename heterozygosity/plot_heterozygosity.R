@@ -1,19 +1,25 @@
 #Load libraries
 library(tidyverse)
+library(data.table)
 library(ggpubr)
 
 #Load files
-setwd('~/Documents/Gray_Fox_Project/Gray_Fox_2023/heterozygosity/')
+setwd('~/Documents/Gray_Fox_2023/heterozygosity/')
+metadata = read.csv('~/Documents/Gray_Fox_2023/metadata/fox_metadata.csv', header = TRUE)
+fnames = list.files(pattern = "\\.vcf.gz.het$")
 
-het_foxes <- read.delim('fox_merge_variants_snps_autosome.GM.AN.qualdp.het', header = TRUE, sep = '\t')
-metadata <- read.csv('../metadata/fox_metadata.csv', header = TRUE)
-
-#Reformat files
-het_foxes <- het_foxes %>%
-  rename(Individual = INDV) %>%
-  mutate(heterozygosity=((N_SITES-O.HOM.)/2233352514))
-
-het_fox_metadata <- merge(het_foxes, metadata, by="Individual") %>%
+#Generate data frame
+##create columns with fileName, population, and compute pi 
+df = rbindlist(sapply(fnames, read_delim, delim = '\t', simplify = FALSE), use.names = TRUE, idcol = "Ref") %>%
+  mutate(Ref = gsub("_filtered.renameChroms.ACgr25_DPgr165lt500.vcf.gz.het","", Ref),
+         INDV = gsub("\\..*", "", INDV),
+         heterozygosity = case_when(
+           Ref == "Canfam4" ~ (N_SITES-`O(HOM)`)/956945116,
+           Ref == "Canfam3.1" ~ (N_SITES-`O(HOM)`)/1483510359,
+           Ref == "arcticfox" ~ (N_SITES-`O(HOM)`)/1485649587,
+           Ref == "grayfox" ~ (N_SITES-`O(HOM)`)/1261457615,
+         )) %>%
+  left_join(metadata, by=c("INDV"="Individual")) %>%
   mutate(CollectionGeneral = case_when(
     Collection_Date == 1988 ~ "1988", 
     Collection_Date >= 1990 & Collection_Date < 2000 ~ "1990s",
