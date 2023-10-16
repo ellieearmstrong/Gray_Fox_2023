@@ -48,19 +48,19 @@ compute_constant = function(numberChromsSampled){
 Newconstant = compute_constant(4)
 
 #get the callable sites
-callableSitesPerChrom = read_delim("~/Documents/Gray_Fox_2023/ComputePi/summary/numSitesPerChrom.txt", delim = " ", col_names = c("callableSites", "file")) %>%
+callableSitesPerChrom = read_delim("~/Documents/Gray_Fox_2023/ComputePi/summary/numSitesPerChrom.txt", delim = "\t", col_names = c("callableSites", "file")) %>%
   mutate(file = gsub("/scratch/users/elliea/jazlyn-ellie/grayfox_2023/Analyses/pi/","",file),
          CHROM = str_extract(file, "^[^_]+"), #keep everything before first underscore
          CHROM = gsub("chrom", "chr", CHROM),
          RefGenome = str_extract(file, "(?<=_)[^_]+(?=_)"), #keep everything btwn first and second underscore
          file = NULL,
-         denominator = callableSites*Newconstant)
+         denominator = callableSites*Newconstant) %>%
+  distinct()
 
 #Compute genome wide theta
-callableSitesGW = data.frame(
-  callableSites = c(1480881980,1506020035,1485649587,1483510359),
-  RefGenome = c("arcticfox","grayfox","Canfam3.1","Canfam4")
-) %>%
+callableSitesGW = callableSitesPerChrom %>% 
+  group_by(RefGenome) %>% 
+  summarise_at(.vars = c("callableSites"), sum) %>%
   mutate(denominator = callableSites*Newconstant)
 
 #Read in the output file for theta and compute it
@@ -92,6 +92,7 @@ meanGW = summaryPerChrom %>%
 
 
 #Plot results
+#pdf(file = "WattersonsThetaPerChrom_Locality_N2.pdf", width = 30, height = 10)
 ggplot(summaryPerChrom, aes(x=Locality_ordered, y=as.numeric(mean), fill=RefGenome)) + 
   geom_bar(stat="identity", color="black", 
            position=position_dodge()) +
@@ -106,5 +107,6 @@ ggplot(summaryPerChrom, aes(x=Locality_ordered, y=as.numeric(mean), fill=RefGeno
         legend.title = element_text(size = 42),
         legend.text = element_text(size = 40),
         legend.position = "right")
+#dev.off()
 
 ggtexttable(meanPerChrom, rows = NULL, theme = ttheme("mBlack"))
