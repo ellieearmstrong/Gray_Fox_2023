@@ -20,8 +20,8 @@ chroms = read.delim("~/Documents/Gray_Fox_2023/metadata/fox_chrom_withLengths.ma
 #    mutate(Ref = gsub('.*\\.', '', INDV),
 #           Ref = gsub("1", "Canfam3.1", Ref),
 #           INDV = gsub("\\..*", "", INDV)) %>%
-#    left_join(allfiles) %>%
-#    left_join(popDF) 
+#    left_join(popDF) %>%
+ 
 #  
 # #find shared ROH, mark to drop if more than two individuals have them  
 #  sharedROH = filterROHCoverage %>% 
