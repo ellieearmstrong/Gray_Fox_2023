@@ -1,0 +1,59 @@
+Individual	Dataset	SRA	Sex	Genome	Region	Location	
+GFO30	Robinson	SRR7458270	M	Canfam3.1	West	California	
+GFO41F	Robinson	SRR5198019-21	F	Canfam3.1	West	California	
+RKW10660	Robinson	SRR7458264	M	Canfam3.1	Channel Islands	Santa Rosa	
+RKW11655	Robinson	SRR7458266	M	Canfam3.1	Channel Islands	San Miguel	
+RKW11697	Robinson	SRR7458271	M	Canfam3.1	Channel Islands	Santa Catalina	
+RKW12297	Robinson	SRR7458267	M	Canfam3.1	Channel Islands	San Nicolas	
+RKW13704	Robinson	SRR7458268	F	Canfam3.1	Channel Islands	San Clemente	
+RKW8695	Robinson	SRR7458269	F	Canfam3.1	Channel Islands	Santa Cruz	
+S13-2949	Sacks	SRR24465296	U	Canfam3.1	West	N. California	
+S16-1460	Sacks	SRR24465295	U	Canfam3.1	West	S. California	
+S19-2925	Sacks	SRR24465294	U	Canfam3.1	West	Texas	
+S19-2940	Sacks	SRR24465282	U	Canfam3.1	West	Texas	
+S19-2974	Sacks	SRR24465293	U	Canfam3.1	West	Texas	
+S19-2977	Sacks	SRR24465281	U	Canfam3.1	West	Texas	
+S19-2992	Sacks	SRR24465280	U	Canfam3.1	West	Texas	
+S19-3050	Sacks	SRR24465279	U	Canfam3.1	West	Texas	
+S19-3061	Sacks	SRR24465278	U	Canfam3.1	West	Texas	
+S19-3064	Sacks	SRR24465292	U	Canfam3.1	West	Texas	
+S19-3066	Sacks	SRR24465291	U	Canfam3.1	West	Texas	
+S19-3072	Sacks	SRR24465277	U	Canfam3.1	West	Texas	
+S19-3074	Sacks	SRR24465303	U	Canfam3.1	East	Texas	
+S19-3075	Sacks	SRR24465276	U	Canfam3.1	West	Texas	
+S19-3084	Sacks	SRR24465274	U	Canfam3.1	West	Texas	
+S19-3098	Sacks	SRR24465273	U	Canfam3.1	West	Texas	
+S19-3133	Sacks	SRR24465290	U	Canfam3.1	West	Texas	
+S19-3152	Sacks	SRR24465289	U	Canfam3.1	West	Texas	
+S19-4623	Sacks	SRR24465309	U	Canfam3.1	East	Missouri	
+S19-4625	Sacks	SRR24465308	U	Canfam3.1	East	Mississippi	
+S19-4626	Sacks	SRR24465297	U	Canfam3.1	East	Mississippi	
+S19-4628	Sacks	SRR24465286	U	Canfam3.1	East	Mississippi	
+S19-4639	Sacks	SRR24465275	U	Canfam3.1	East 	Tennessee	
+S19-4642	Sacks	SRR24465272	U	Canfam3.1	East 	Tennessee	
+S19-4663	Sacks	SRR24465271	U	Canfam3.1	East	Alabama	
+S19-4675	Sacks	SRR24465288	U	Canfam3.1	West	Nevada	
+S19-4679	Sacks	SRR24465287	U	Canfam3.1	West	Nevada	
+S19-4685	Sacks	SRR24465302	U	Canfam3.1	East	Oklahoma	
+S19-4692	Sacks	SRR24465301	U	Canfam3.1	East	Oklahoma	
+S19-4695	Sacks	SRR24465300	U	Canfam3.1	East	Oklahoma	
+S19-4698	Sacks	SRR24465299	U	Canfam3.1	East	Arkansas	
+S19-4699	Sacks	SRR24465270	U	Canfam3.1	East	Arkansas	
+S19-4701	Sacks	SRR24465269	U	Canfam3.1	East	Arkansas	
+S19-4702	Sacks	SRR24465298	U	Canfam3.1	East	Arkansas	
+S19-4703	Sacks	SRR24465268	U	Canfam3.1	East	Arkansas	
+S19-4710	Sacks	SRR24465307	U	Canfam3.1	East	Arkansas	
+S19-4714	Sacks	SRR24465306	U	Canfam3.1	East	Arkansas	
+S19-4715	Sacks	SRR24465285	U	Canfam3.1	West	New Mexico	
+S19-4717	Sacks	SRR24465284	U	Canfam3.1	West	New Mexico	
+S19-4728	Sacks	SRR24465283	U	Canfam3.1	West	New Mexico	
+S19-4737	Sacks	SRR24465305	U	Canfam3.1	East	Kentucky	
+S19-6655	Sacks	SRR24465304	U	Canfam3.1	East	South Carolina	
+SCA16F	Robinson	SRR5198016-18	F	Canfam3.1	Channel Islands	Santa Catalina	
+SCLV4F	Robinson	SRR5198013-15	F	Canfam3.1	Channel Islands	San Clemente	
+SCZ05M	Robinson	SRR5198010-12	M	Canfam3.1	Channel Islands	Santa Cruz	
+SMI15F	Robinson	SRR5198007-9	F	Canfam3.1	Channel Islands	San Miguel	
+SNI05F	Robinson	SRR5198004-6	F	Canfam3.1	Channel Islands	San Nicolas	
+SNI41F	Robinson	SRR5198001-3	F	Canfam3.1	Channel Islands	San Nicolas	
+SRO13/RKW12355	Robinson	SRR7458265	F	Canfam3.1	Channel Islands	Santa Rosa	
+SRO40F	Robinson	SRR5197998-8000	F	Canfam3.1	Channel Islands	Santa Rosa	
