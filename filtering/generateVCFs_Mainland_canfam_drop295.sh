@@ -19,7 +19,7 @@ ml biology samtools/1.16.1
 #Filter out repeat regions and low mappability regions and down get all sites file is biallelic sites that pass filters but may or may not be snps
 #Filter canfam3.1
 #SECONDS=0
-#bcftools view -M 2 /scratch/users/elliea/jazlyn-ellie/grayfox_2023/raw_data/batch3/sacks_cfam3_hc_gvcfs/batch3-mainland-canfam3.merged.allsites.vcf.gz| bcftools view -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/canfam3_mappability_genmap.1.0.bed -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/Canfam3.1_repeatmask.bed | bcftools annotate --rename-chrs /scratch/users/elliea/jazlyn-ellie/grayfox_2023/metaData/canfam3.1_renameChroms.txt -Oz -o /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam3.1_filtered.renameChroms.Mainland.gvcf.gz
+#bcftools view --max-alleles 2 --exclude-types indels  /scratch/users/elliea/jazlyn-ellie/grayfox_2023/raw_data/batch3/sacks_cfam3_hc_gvcfs/batch3-mainland-canfam3.merged.allsites.vcf.gz| bcftools view -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/canfam3_mappability_genmap.1.0.bed -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/Canfam3.1_repeatmask.bed | bcftools annotate --rename-chrs /scratch/users/elliea/jazlyn-ellie/grayfox_2023/metaData/canfam3.1_renameChroms.txt -Oz -o /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam3.1_filtered.renameChroms.Mainland.gvcf.gz
 #echo $SECONDS
 
 #SECONDS=0
@@ -28,7 +28,7 @@ ml biology samtools/1.16.1
 
 #Filter canfam4
 #SECONDS=0 
-#bcftools view -M 2 /scratch/users/elliea/jazlyn-ellie/grayfox_2023/raw_data/canfam4_map/batch3/sacks_cfam4_hc/batch3-mainland-canfam4.merged.allsites.vcf.gz | bcftools view -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/canfam4_mappability_genmap.1.0.bed -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/Canfam4_repeatmask.bed | bcftools annotate --rename-chrs /scratch/users/elliea/jazlyn-ellie/grayfox_2023/metaData/canfam4_renameChroms_number.txt -Oz -o /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam4_filtered.renameChroms.Mainland.gvcf.gz
+#bcftools view --max-alleles 2 --exclude-types indels /scratch/users/elliea/jazlyn-ellie/grayfox_2023/raw_data/canfam4_map/batch3/sacks_cfam4_hc/batch3-mainland-canfam4.merged.allsites.vcf.gz | bcftools view -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/canfam4_mappability_genmap.1.0.bed -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/Canfam4_repeatmask.bed | bcftools annotate --rename-chrs /scratch/users/elliea/jazlyn-ellie/grayfox_2023/metaData/canfam4_renameChroms_number.txt -Oz -o /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam4_filtered.renameChroms.Mainland.gvcf.gz
 #echo $SECONDS
 
 #SECONDS=0 
