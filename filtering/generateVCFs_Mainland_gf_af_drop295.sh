@@ -19,7 +19,7 @@ ml biology samtools/1.16.1
 #Filter out repeat regions and low mappability regions and down get all sites file is biallelic sites that pass filters but may or may not be snps
 #arctic fox
 #SECONDS=0
-#bcftools view -M 2 /scratch/users/elliea/jazlyn-ellie/grayfox_2023/raw_data/arctic_fox/batch3/sacks_hc_arctic/batch3-mainland-arcticfox.merged.allsites.vcf.gz | bcftools view -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/arcticfox_mappability_genmap.1.0.bed -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/ArcticFox_repeatmask.bed | bcftools annotate --rename-chrs /scratch/users/elliea/jazlyn-ellie/grayfox_2023/metaData/arcticfox_renameChroms_number.txt -Oz -o /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/arcticfox_filtered.renameChroms.Mainland.gvcf.gz
+#bcftools view --max-alleles 2 --exclude-types indels /scratch/users/elliea/jazlyn-ellie/grayfox_2023/raw_data/arctic_fox/batch3/sacks_hc_arctic/batch3-mainland-arcticfox.merged.allsites.vcf.gz | bcftools view -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/arcticfox_mappability_genmap.1.0.bed -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/ArcticFox_repeatmask.bed | bcftools annotate --rename-chrs /scratch/users/elliea/jazlyn-ellie/grayfox_2023/metaData/arcticfox_renameChroms_number.txt -Oz -o /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/arcticfox_filtered.renameChroms.Mainland.gvcf.gz
 #echo $SECONDS
 
 #SECONDS=0
@@ -28,7 +28,7 @@ ml biology samtools/1.16.1
 
 #gray fox
 #SECONDS=0
-#bcftools view -M 2 /scratch/users/elliea/jazlyn-ellie/grayfox_2023/raw_data/gray_fox/batch3/sacks_grayfox_batch3_hc/batch3-mainland-grayfox.merged.allsites.vcf.gz | bcftools view -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/grayfox_mappability_genmap.1.0.bed -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/Grayfox_repeatmask.bed | bcftools annotate --rename-chrs /scratch/users/elliea/jazlyn-ellie/grayfox_2023/metaData/grayfox_renameChroms_number.txt -Oz -o /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/grayfox_filtered.renameChroms.Mainland.gvcf.gz
+#bcftools view --max-alleles 2 --exclude-types indels /scratch/users/elliea/jazlyn-ellie/grayfox_2023/raw_data/gray_fox/batch3/sacks_grayfox_batch3_hc/batch3-mainland-grayfox.merged.allsites.vcf.gz | bcftools view -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/grayfox_mappability_genmap.1.0.bed -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_2023/genmap_repmask/Grayfox_repeatmask.bed | bcftools annotate --rename-chrs /scratch/users/elliea/jazlyn-ellie/grayfox_2023/metaData/grayfox_renameChroms_number.txt -Oz -o /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/grayfox_filtered.renameChroms.Mainland.gvcf.gz
 #echo $SECONDS
 
 #SECONDS=0
