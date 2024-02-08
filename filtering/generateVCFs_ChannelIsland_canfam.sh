@@ -39,7 +39,7 @@ ml biology samtools/1.16.1
 ##Filtering based on depth and allele count
 #Canfam3.1
 #SECONDS=0
-#bcftools filter -e 'AC > 59 && INFO/DP > 204 && INFO/DP < 501' /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam3.1_filtered.renameChroms.gvcf.gz -Oz -o /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam3.1_filtered.renameChroms.ACgr25_DPgr165lt500.gvcf.gz
+#bcftools filter -e 'AC > 23 && INFO/DP > 204 && INFO/DP < 501' /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam3.1_filtered.renameChroms.gvcf.gz -Oz -o /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam3.1_filtered.renameChroms.ACgr25_DPgr165lt500.gvcf.gz
 #echo $SECONDS
 
 #SECONDS=0
@@ -48,7 +48,7 @@ ml biology samtools/1.16.1
 
 #Canfam4
 #SECONDS=0
-#bcftools filter -e 'AC > 59 && INFO/DP > 204 && INFO/DP < 501' /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam4_filtered.renameChroms.gvcf.gz -Oz -o /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam4_filtered.renameChroms.ACgr25_DPgr165lt500.gvcf.gz
+#bcftools filter -e 'AC > 23 && INFO/DP > 204 && INFO/DP < 501' /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam4_filtered.renameChroms.gvcf.gz -Oz -o /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam4_filtered.renameChroms.ACgr25_DPgr165lt500.gvcf.gz
 #echo $SECONDS
 
 #SECONDS=0
