@@ -47,7 +47,7 @@ ml biology samtools/1.16.1
 
 ##Filtering based on depth and allele count
 #SECONDS=0
-#bcftools filter -e 'AC < 61 || INFO/DP < 205 || INFO/DP > 500' /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam3.1_filtered.renameChroms.Mainland.drop295.gvcf.gz -Oz -o /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam3.1_filtered.renameChroms.Mainland.drop295.ACgr25_DPgr165lt500.gvcf.gz
+#bcftools filter -e 'AC > 59 && INFO/DP > 204 && INFO/DP < 501' /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam3.1_filtered.renameChroms.Mainland.drop295.gvcf.gz -Oz -o /scratch/users/elliea/jazlyn-ellie/grayfox_2023/vcf/Canfam3.1_filtered.renameChroms.Mainland.drop295.ACgr25_DPgr165lt500.gvcf.gz
 #echo $SECONDS
 
 #SECONDS=0
