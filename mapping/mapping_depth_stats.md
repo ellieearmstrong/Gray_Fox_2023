@@ -25,4 +25,11 @@ for file in *.mosdepth.summary.txt;do echo $file && head -n 39 $file | awk '{ su
 To calculate average depth across only autosomes
 ```
 for file in *.mosdepth.summary.txt;do grep -v 'Scaffold_19' $file | head -n 33 | awk '{ sum += $4} END { print sum / 32}' ;done
+
 ```
+
+## Gray Wolf
+To calculate average depth across only autosomes
+``` 
+for file in *.mosdepth.summary.txt;do grep -v 'CAJ' $file |  head -n 39 | awk '{ sum += $4} END { print sum / 38}' ;done
+``` 
