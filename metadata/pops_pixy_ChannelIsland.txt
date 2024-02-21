@@ -1,0 +1,16 @@
+SCA16F	Santa_Catalina
+SCLV4F	San_Clemente
+SCZ05M	Santa_Cruz
+SMI15F	San_Miguel
+SNI05F	San_Nicolas
+SNI41F	San_Nicolas
+SRO40F	Santa_Rosa
+GFO41F	Mainland
+SRR7458271	Santa_Catalina
+SRR7458268	San_Clemente
+SRR7458269	Santa_Cruz
+SRR7458266	San_Miguel
+SRR7458267	San_Nicolas
+SRR7458265	Santa_Rosa
+SRR7458264	Santa_Rosa
+SRR7458270	Mainland
