@@ -1,13 +1,34 @@
-ml biology plink2.0/a2
+#!/bin/sh
 
-#convert vcf to plink
-for i in {arcticfox,grayfox}; do plink2 --vcf ../grayfox_filtered.renameChroms.ACgr25_DPgr165lt500.vcf.gz --allow-extra-chr --chr-set 32 --make-bed --out grayfox_filtered.renameChroms.ACgr25_DPgr165lt500;done
-for i in {Canfam3.1,Canfam4}; do plink2 --vcf ../grayfox_filtered.renameChroms.ACgr25_DPgr165lt500.vcf.gz --allow-extra-chr --chr-set 38 --make-bed --out grayfox_filtered.renameChroms.ACgr25_DPgr165lt500;done
+#Load library
+ml plink2/2.00a3.7LM
 
+for f in {Mainland,ChannelIsland}
+do
+	while read -r p
 
+	do
+
+	plink2 --vcf /scratch1/jazlynmo/grayfox/vcf/"$f"/"$p".vcf.gz --allow-extra-chr --chr-set 38 --threads 32 --make-bed --out /scratch1/jazlynmo/grayfox/plink/"$f"/"$p"
+
+	echo $p
+
+	done < vcfIn_"$f".txt
+
+done
+
+#Load new library
 #convert to tped
-ml biology plink/1.90b5.3
+ml gcc/11.3.0  openblas/0.3.21 plink/1.9-beta7
 
-for i in {arcticfox,grayfox}; do plink --bfile "$i"_filtered.renameChroms.ACgr25_DPgr165lt500 --allow-extra-chr --chr-set 32 --recode transpose --out "$i"_filtered.renameChroms.ACgr25_DPgr165lt500; done
+for f in {Mainland,ChannelIsland}
+do
+	while read -r p
 
-for i in {Canfam3.1,Canfam4}; do plink --bfile "$i"_filtered.renameChroms.ACgr25_DPgr165lt500 --allow-extra-chr --chr-set 38 --recode transpose --out "$i"_filtered.renameChroms.ACgr25_DPgr165lt500; done
+	do
+
+	plink --bfile /scratch1/jazlynmo/grayfox/plink/"$f"/$p  --allow-extra-chr --chr-set 38 --recode transpose --threads 32 --out /scratch1/jazlynmo/grayfox/plink/"$f"/"$p"
+
+	done < vcfIn_"$f".txt
+
+done
