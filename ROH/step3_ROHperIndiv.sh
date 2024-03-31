@@ -22,3 +22,5 @@ do
 echo "$i"
 
 done
+
+rm int.out
