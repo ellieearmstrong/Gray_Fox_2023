@@ -15,6 +15,7 @@ module load gcc/11.3.0  openblas/0.3.21 bcftools/1.14
 module load htslib/1.17
 
 #Filter out repeat regions and low mappability regions and down get all sites file is biallelic sites that pass filters but may or may not be snps
+###Note with this new gvcf individual 295 was never used during joint calling so we do not need to remove
 
 SECONDS=0
 bcftools view --max-alleles 2 --exclude-types indels /scratch/users/elliea/jazlyn-ellie/mainlandgf_gfref_merge_allsites_Jan24.g.vcf.gz | bcftools view -T ^/scratch/users/elliea/jazlyn-ellie/grayfox_mappability_genmap.1.0.bed | bcftools annotate --rename-chrs /scratch/users/elliea/jazlyn-ellie/grayfox_renameChroms_number.txt -Oz -o  /scratch/users/elliea/jazlyn-ellie/grayfox_filtered.renameChroms.Mainland.gvcf.gz
