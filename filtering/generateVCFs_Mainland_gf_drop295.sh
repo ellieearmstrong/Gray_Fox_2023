@@ -1,7 +1,7 @@
 #!/bin/sh
-#SBATCH --job-name=b_af_filterGVCF
-#SBATCH --output=/scratch1/jazlynmo/grayfox/makevcfs_af_main.drop295.bcf.out  #you will need to modify the path
-#SBATCH --error=/scratch1/jazlynmo/grayfox/makevcfs_af_main.drop295.bcf.err  #you will need to modify the path
+#SBATCH --job-name=b_gf_filterGVCF
+#SBATCH --output=/scratch1/jazlynmo/grayfox/makevcfs_gf_main.drop295.bcf.out  #you will need to modify the path
+#SBATCH --error=/scratch1/jazlynmo/grayfox/makevcfs_gf_main.drop295.bcf.err  #you will need to modify the path
 #SBATCH --time=48:00:00 #run time
 #SBATCH -p qcb #the main partition
 #SBATCH --ntasks=1
