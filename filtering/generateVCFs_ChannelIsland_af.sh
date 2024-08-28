@@ -31,7 +31,7 @@ module load htslib/1.17
 ##Filtering based on depth and allele count and rename individuals
 #arcticfox
 SECONDS=0
-bcftools filter -e 'AC > 23 && INFO/DP > 204 && INFO/DP < 501' /scratch1/jazlynmo/grayfox/vcf/ChannelIsland/unfiltered/arcticfox_filtered.renameChroms.gvcf.gz | bcftools reheader -s /scratch1/jazlynmo/grayfox/metaData/rename_arcticfox | bcftools view --max-alleles 2 --exclude-types indels -Oz -o /scratch1/jazlynmo/grayfox/vcf/ChannelIsland/arcticfox_filtered.renameChroms.ACgr25_DPgr165lt500.gvcf.gz
+bcftools filter -e 'AN > 23 && INFO/DP > 204 && INFO/DP < 501' /scratch1/jazlynmo/grayfox/vcf/ChannelIsland/unfiltered/arcticfox_filtered.renameChroms.gvcf.gz | bcftools reheader -s /scratch1/jazlynmo/grayfox/metaData/rename_arcticfox | bcftools view --max-alleles 2 --exclude-types indels -Oz -o /scratch1/jazlynmo/grayfox/vcf/ChannelIsland/arcticfox_filtered.renameChroms.ACgr25_DPgr165lt500.gvcf.gz
 echo $SECONDS
 
 SECONDS=0
