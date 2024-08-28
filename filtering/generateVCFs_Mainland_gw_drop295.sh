@@ -26,7 +26,7 @@ echo $SECONDS
 
 ##Filtering based on depth and allele count
 SECONDS=0
-bcftools filter -i 'AC > 59 && INFO/DP > 204 && INFO/DP < 501'  /scratch/users/elliea/jazlyn-ellie/graywolf_filtered.renameChroms.Mainland.gvcf.gz -Oz -o  /scratch/users/elliea/jazlyn-ellie/graywolf_filtered.renameChroms.Mainland.drop295.ACgr59_DPgr205lt500.gvcf.gz
+bcftools filter -i 'AN > 59 && INFO/DP > 204 && INFO/DP < 501'  /scratch/users/elliea/jazlyn-ellie/graywolf_filtered.renameChroms.Mainland.gvcf.gz -Oz -o  /scratch/users/elliea/jazlyn-ellie/graywolf_filtered.renameChroms.Mainland.drop295.ACgr59_DPgr205lt500.gvcf.gz
 echo $SECONDS
 
 SECONDS=0
