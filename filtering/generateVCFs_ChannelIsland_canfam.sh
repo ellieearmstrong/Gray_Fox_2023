@@ -30,7 +30,7 @@ module load htslib/1.17
 ##Filtering based on depth and allele count
 #Canfam3.1
 SECONDS=0
-bcftools filter -i 'AC > 23 && INFO/DP > 164 && INFO/DP < 501' /scratch1/jazlynmo/grayfox/vcf/ChannelIsland/unfiltered/Canfam3.1_filtered.renameChroms.gvcf.gz | bcftools view --max-alleles 2 --exclude-types indels -Oz -o /scratch1/jazlynmo/grayfox/vcf/ChannelIsland/Canfam3.1_filtered.renameChroms.ACgr25_DPgr165lt500.gvcf.gz
+bcftools filter -i 'AN > 23 && INFO/DP > 164 && INFO/DP < 501' /scratch1/jazlynmo/grayfox/vcf/ChannelIsland/unfiltered/Canfam3.1_filtered.renameChroms.gvcf.gz | bcftools view --max-alleles 2 --exclude-types indels -Oz -o /scratch1/jazlynmo/grayfox/vcf/ChannelIsland/Canfam3.1_filtered.renameChroms.ACgr25_DPgr165lt500.gvcf.gz
 echo $SECONDS
 
 SECONDS=0
