@@ -2,7 +2,7 @@
 #SBATCH --job-name=canfam4_filterGVCF
 #SBATCH --output=/scratch/users/elliea/jazlyn-ellie/makevcfs_c4.out  #you will need to modify the path
 #SBATCH --error=/scratch/users/elliea/jazlyn-ellie/makevcfs_c4.err  #you will need to modify the path
-#SBATCH --time=08:00:00 #run time
+#SBATCH --time=20:00:00 #run time
 #SBATCH -p normal,hns #the main partition
 #SBATCH --cpus-per-task=1 #one cpu per task
 #SBATCH -n 24
