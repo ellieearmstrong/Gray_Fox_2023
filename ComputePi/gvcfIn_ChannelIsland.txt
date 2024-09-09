@@ -1,4 +1,0 @@
-arcticfox_filtered.renameChroms.ACgr25_DPgr165lt500
-Canfam3.1_filtered.renameChroms.ACgr25_DPgr165lt500
-Canfam4_filtered.renameChroms.ACgr25_DPgr165lt500
-grayfox_filtered.renameChroms.ACgr25_DPgr165lt500
